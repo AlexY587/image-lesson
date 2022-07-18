@@ -15,7 +15,7 @@
 
 
 //STATIC TO COPY
-float imageX, imageY, imagewidth, imageheight;
+float imageX, imageY, imagewidth, imageheight, picWidthAdjusted, picHeightAdjusted;
 PImage pic;
 //
 //Canvas
@@ -25,7 +25,10 @@ size(750, 500);//Landscape
 pic = loadImage("Image_Lesson/download (1).jpg");//Dimensions : width 511.333px, height 767
 int picWidth = 511;
 int picHeight = 767;
-if () {} else {}//end image dimension comparison
+if (picWidth >= picHeight) {
+  imageLargerDimension = picWidth;
+  imageSmallerDimension = picHeight;
+} else {}//end image dimension comparison
 imageX = width*0;
 imageY = height*0;
 imagewidth = width-0;//Canvas (0,0) means point doesnt match to rectangle missing outline on two sides
