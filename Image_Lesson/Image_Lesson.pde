@@ -16,6 +16,7 @@
 
 //STATIC TO COPY
 float imageX, imageY, imagewidth, imageheight, picWidthAdjusted, picHeightAdjusted;
+float imageLargerDimension, imageSmallerDimension;
 PImage pic;
 //
 //Canvas
@@ -28,7 +29,11 @@ int picHeight = 767;
 if (picWidth >= picHeight) {
   imageLargerDimension = picWidth;
   imageSmallerDimension = picHeight;
-} else {}//end image dimension comparison
+} else {
+  //false if portrait
+  imageLargerDimension = picHeight;
+  imageSmallerDimension = picWidth;
+}//end image dimension comparison
 imageX = width*0;
 imageY = height*0;
 imagewidth = width-0;//Canvas (0,0) means point doesnt match to rectangle missing outline on two sides
@@ -36,4 +41,4 @@ imageheight = height-0;
 //
 rect(imageX, imageY, imagewidth, imageheight);//Background image
 image(pic,imageX, imageY, imagewidth, imageheight);
-image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted)
+image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);
