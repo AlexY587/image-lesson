@@ -30,6 +30,7 @@ if (picWidth >= picHeight) {
   imageSmallerDimension = picWidth;
   heightLarger = true;
  }//end image dimension comparison
+ //
  if (picWidth2 >= picHeight2) {
   imageLargerDimension2 = picWidth2;
   imageSmallerDimension2 = picHeight2;
@@ -65,10 +66,10 @@ imageX = width*0;
 imageY = height*0;
 imagewidth = width-1;//Canvas (0,0) means point doesnt match to rectangle missing outline on two sides
 imageheight = (height-1) * 1/2;
-imageX2 = width*0;
-imageY2 = height*1/2;
-imagewidth2 = width-1;//Canvas (0,0) means point doesnt match to rectangle missing outline on two sides
-imageheight2 = (height-1)*1/2;
+imageX2 = (width-1)*1/3;
+imageY2 = (height+1)*1/1000;
+imagewidth2 = (width-1)*1/2;//Canvas (0,0) means point doesnt match to rectangle missing outline on two sides
+imageheight2 = (height-1)*1.5;
 //
 //Combunatuin of population of image with population of rect()
 //adjusted image variabels for aspect ratio, entire image will be smaller
