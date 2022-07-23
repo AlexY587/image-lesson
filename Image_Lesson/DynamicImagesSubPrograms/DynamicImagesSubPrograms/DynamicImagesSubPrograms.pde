@@ -28,9 +28,13 @@ void draw () {//repeats 60/seconds, static images shold be in setup, "system rea
 //empty draw loop, must be present for JAVA compiler
 }//end draw
 //
-//void keyPressed() {} //end keypressed
+void keyPressed(){
+  rect(0,0,width, height);
+}//end keypressed
 //
-//void mousePressed() {}//end mousepressed
+void mousePressed() {
+imageDraw();
+}//end mousepressed
 //
 //END main program
 //
